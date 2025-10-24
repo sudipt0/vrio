@@ -1,0 +1,29 @@
+{
+    "version": "1.0.0",
+    "name": "sudipta/vrio",
+    "description": "Laravel package for Vrio CRM",
+    "license": "MIT",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Sudipta\\Vrio\\": "src/"
+        }
+    },
+    "require": {
+        "php": ">=8.0",
+        "guzzlehttp/guzzle": "^7.0",
+        "illuminate/support": "^10.0 || ^11.0 || ^12.0"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Sudipta\\Vrio\\VrioServiceProvider"
+            ],
+            "aliases": {
+                "Vrio": "Sudipta\\Vrio\\Facades\\Vrio"
+            }
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
