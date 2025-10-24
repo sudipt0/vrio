@@ -1,8 +1,14 @@
 {
   "name": "sudipta/vrio",
-  "description": "Laravel package for Vrio CRM",
+  "description": "Laravel package for Vrio CRM integration",
   "type": "library",
   "license": "MIT",
+  "keywords": [
+    "laravel",
+    "crm",
+    "vrio",
+    "api"
+  ],
   "authors": [
     {
       "name": "Sudipta Mondal",
@@ -12,11 +18,21 @@
   "require": {
     "php": "^8.1",
     "guzzlehttp/guzzle": "^7.7",
-    "illuminate/support": "^10.0 || ^11.0 || ^12.0"
+    "illuminate/support": "^10.0 || ^11.0 || ^12.0",
+    "illuminate/contracts": "^10.0 || ^11.0 || ^12.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^10.0",
+    "orchestra/testbench": "^8.0"
   },
   "autoload": {
     "psr-4": {
       "Sudipta\\Vrio\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Sudipta\\Vrio\\Tests\\": "tests/"
     }
   },
   "extra": {
@@ -28,6 +44,21 @@
         "Vrio": "Sudipta\\Vrio\\Facades\\Vrio"
       }
     }
+  },
+  "scripts": {
+    "test": "vendor/bin/phpunit",
+    "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+  },
+  "config": {
+    "sort-packages": true,
+    "allow-plugins": {
+      "pestphp/pest-plugin": true
+    }
+  },
+  "support": {
+    "email": "sudip1992@gmail.com",
+    "issues": "https://github.com/sudipta/vrio/issues",
+    "source": "https://github.com/sudipta/vrio"
   },
   "minimum-stability": "stable",
   "prefer-stable": true
