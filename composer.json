@@ -1,6 +1,5 @@
 {
   "name": "sudipta/vrio",
-  "version": "1.0.4",
   "description": "Laravel package for Vrio CRM",
   "type": "library",
   "license": "MIT",
